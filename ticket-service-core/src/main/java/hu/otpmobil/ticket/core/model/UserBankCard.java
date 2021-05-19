@@ -1,7 +1,6 @@
-package hu.otpmobile.ticket.core.model;
+package hu.otpmobil.ticket.core.model;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Currency;
 
 @Entity

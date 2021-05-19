@@ -1,6 +1,6 @@
-package hu.otpmobile.ticket.core.repository;
+package hu.otpmobil.ticket.core.repository;
 
-import hu.otpmobile.ticket.core.model.UserToken;
+import hu.otpmobil.ticket.core.model.UserToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

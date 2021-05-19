@@ -1,4 +1,4 @@
-package hu.otpmobile.ticket.core.model;
+package hu.otpmobil.ticket.core.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

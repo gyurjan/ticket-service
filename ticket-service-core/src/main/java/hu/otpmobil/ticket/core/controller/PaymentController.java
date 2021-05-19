@@ -1,8 +1,8 @@
-package hu.otpmobile.ticket.core.controller;
+package hu.otpmobil.ticket.core.controller;
 
 import hu.otpmobil.common.dto.PaymentRequest;
 import hu.otpmobil.common.dto.PaymentResult;
-import hu.otpmobile.ticket.core.service.PaymentService;
+import hu.otpmobil.ticket.core.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

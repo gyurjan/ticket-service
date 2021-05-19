@@ -21,7 +21,7 @@ public class PaymentService {
     private TicketClient ticketClient;
 
     public ReservationResult pay(String userToken, Long eventId, String seatId, String cardId) {
-        logger.info("Payment request received with parameters: userToken {0}, eventId {1}, seat {2}, card {3}",
+        logger.info("Payment request received with parameters: userToken {}, eventId {}, seat {}, card {}",
                 userToken, eventId, seatId, cardId);
         ReservationResult reservationResult = new ReservationResult();
         UserValidationResponseDto userValidationResponseDto = coreClient.validateToken(userToken);

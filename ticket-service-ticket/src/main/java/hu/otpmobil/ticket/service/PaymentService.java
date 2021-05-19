@@ -27,7 +27,7 @@ public class PaymentService {
     private Clock clock;
 
     public ReservationResult pay(Long userId, Long eventId, String seatId, String carId) {
-        logger.info("Payment request received: userId: {0},  eventId: {1}, seatId: {2}, cardId: {3}", userId, eventId, seatId, carId);
+        logger.info("Payment request received: userId: {},  eventId: {}, seatId: {}, cardId: {}", userId, eventId, seatId, carId);
         ReservationResult reservationResult = new ReservationResult();
         long currentTimeStamp = clock.millis();
 
@@ -38,11 +38,13 @@ public class PaymentService {
                 );
 
         if (eventDto.getStartTimeStamp() * 1000 < currentTimeStamp) {
+            logger.error("The event already started.");
             throw new PaymentException(Errors.START_TIME_IN_THE_PAST);
         }
 
         EventDetailsDto eventDetailsDto = eventService.getEvent(eventId);
         if (Objects.isNull(eventDetailsDto)) {
+            logger.error("Event not found with id: {}.", eventId);
             throw new PaymentException(Errors.EVENT_NOT_FOUND);
         }
 
@@ -51,6 +53,7 @@ public class PaymentService {
                 .findFirst().orElseThrow(() -> new PaymentException(Errors.SEAT_NOT_FOUND));
 
         if (seat.getReserved()) {
+            logger.error("Seat already reserved with seat id: {}.", seatId);
             throw new PaymentException(Errors.SEAT_ALREADY_RESERVED);
         }
 

@@ -1,4 +1,4 @@
-package hu.otpmobile.ticket.core;
+package hu.otpmobil.ticket.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -17,4 +17,12 @@ public class ExceptionHelper {
         return new ResponseEntity<Object>(reservationResult, HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(value = { PartnerConnectionException.class })
+    public ResponseEntity<Object> handlePartnerConnectionException(PartnerConnectionException ex) {
+        ReservationResult reservationResult = new ReservationResult();
+        reservationResult.setSuccess(false);
+        reservationResult.setErrorCode(ex.getError().getErrorCode());
+        return new ResponseEntity<Object>(reservationResult, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
 }

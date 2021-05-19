@@ -14,7 +14,9 @@ public enum Errors {
     USER_WITH_NOT_VALID_CARD("A beérkezett kérésben szereplő bankkártya nem az adott felhasználóhoz tartozik", 10100,
             "Ez a bankkártya nem ehhez a felhasználóhoz tartozik"),
 
-    START_TIME_IN_THE_PAST(null, 20011, "Olyan eseményre ami már elkezdődött nem lehet jegyet eladni!");
+    START_TIME_IN_THE_PAST(null, 20011, "Olyan eseményre ami már elkezdődött nem lehet jegyet eladni!"),
+
+    PARTNER_SERVICE_NOT_AVAILABLE(null, 20404, "A külső rendszer nem elérhető!");
 
     private String event;
     private Integer errorCode;

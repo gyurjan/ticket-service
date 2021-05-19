@@ -1,10 +1,10 @@
-package hu.otpmobile.ticket.core.service;
+package hu.otpmobil.ticket.core.service;
 
 import hu.otpmobil.common.dto.UserValidationResponseDto;
 import hu.otpmobil.common.error.Errors;
-import hu.otpmobile.ticket.core.model.UserToken;
-import hu.otpmobile.ticket.core.model.Users;
-import hu.otpmobile.ticket.core.repository.UserTokenRepository;
+import hu.otpmobil.ticket.core.repository.UserTokenRepository;
+import hu.otpmobil.ticket.core.model.UserToken;
+import hu.otpmobil.ticket.core.model.Users;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
