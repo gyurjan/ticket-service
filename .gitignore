@@ -1,0 +1,8 @@
+ticket-service-core/target/
+ticket-service-partner/target/
+ticket-service-ticket/target/
+ticket-service-common/target/
+ticket-service-api/target/classes/hu/otpmobile/ticket/api/controller/EventController.class
+ticket-service-api/target/
+.idea/
+*.iml
